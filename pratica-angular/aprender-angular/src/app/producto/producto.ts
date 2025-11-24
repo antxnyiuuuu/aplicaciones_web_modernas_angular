@@ -9,5 +9,9 @@ import { Component } from "@angular/core";
 )
 
 export class ProductoComponent {
+  constructor() {
+    // console.log("Se ha cargado el componente de productos");
+    // alert("hola");
+  }
 
 }

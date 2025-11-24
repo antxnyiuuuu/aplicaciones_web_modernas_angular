@@ -9,5 +9,9 @@ import { Component } from "@angular/core";
 )
 
 export class PerfilComponent {
+    constructor() {
+        alert("¡Bienvenido al perfil, estás dentro de la aplicación!");
+        console.log("¡Bienvenido al perfil, estás dentro de la aplicación!");
+    }
 
 }
