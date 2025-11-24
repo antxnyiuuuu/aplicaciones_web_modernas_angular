@@ -1,16 +1,13 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "app-producto",
-  template: 
-    `<h1>Mi producto </h1>
-    <p>Mi producto es un ordenador</p>
-    <p> De marca ASUS </p> 
-    <strong> 400 </strong>
-    `,     
-  styles: [``],
+  selector: "mi-producto",
+  templateUrl: "./producto.html",
+  styleUrl: "./producto.css"
 },
 
 )
 
-export class ProductoComponent {}
+export class ProductoComponent {
+
+}
