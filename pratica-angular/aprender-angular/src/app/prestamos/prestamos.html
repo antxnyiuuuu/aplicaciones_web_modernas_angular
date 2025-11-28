@@ -15,8 +15,7 @@
     }
 </ul>
 
-@switch (prestamo.tipo) { 
-  @case ("Personal") {
+@switch (prestamo.tipo) { @case ("Personal") {
 <li>El Prestamo es de tipo Personal</li>
 } @case ("Hipotecario") {
 <app-transacciones></app-transacciones>
@@ -29,5 +28,6 @@
 <h2>{{ url | uppercase }}</h2>
 <h2>{{ url | lowercase }}</h2>
 <h2>{{ url | titlecase }}</h2>
-<h2>{{ url | json }}</h2> 
+<h2>{{ url | json }}</h2>
 <h2>{{url | slice: 1}}</h2>
+<h2>{{url | ascii}}</h2>
