@@ -10,7 +10,7 @@ export class Cuenta {
   public mostrarCuenta: boolean = true;
   public cliente: Cliente;
   constructor() {
-    this.cliente = new Cliente(1, 'Martin', 'Simbaña', 'martin@gmail.com', 5000);
+    this.cliente = new Cliente(1, 'Antony', 'Chaguamate', 'antonykhujksad@gmail.com', 5000);
   }
   mostrarCompCuenta(valor: boolean) {
     this.mostrarCuenta = valor;
