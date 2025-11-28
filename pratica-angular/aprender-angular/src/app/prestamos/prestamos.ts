@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './prestamos.css',
 })
 export class Prestamos {
+  url = 'https://github.com/antxnyiuuuu';
+  redirigir = false;
 
+  cambiarRedirigir() {
+    if (this.redirigir == false) {
+      this.redirigir = true;
+    } else {
+      this.redirigir = false;
+    }
+  }
 }

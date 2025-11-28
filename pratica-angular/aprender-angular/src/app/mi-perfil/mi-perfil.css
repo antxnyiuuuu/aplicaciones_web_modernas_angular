@@ -1,0 +1,15 @@
+h1 {
+    color: green;
+}
+em {
+    color: red;
+}
+p {
+    font-size: 16px;
+}
+strong {
+    font-weight: bold;
+}
+cite {
+    font-style: italic;
+}

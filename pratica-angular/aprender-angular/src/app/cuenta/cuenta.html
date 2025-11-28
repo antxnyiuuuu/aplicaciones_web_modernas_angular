@@ -1,1 +1,7 @@
-<p>cuenta works!</p>
+@if(mostrarCuenta){
+<button (click)="mostrarCompCuenta(false)">Ocultar Cuenta</button>
+}@else {
+<button (click)="mostrarCompCuenta(true)">Mostrar Cuenta</button>
+} @if(mostrarCuenta==true){
+<p>Aquí va la información de la cuenta del usuario.</p>
+}

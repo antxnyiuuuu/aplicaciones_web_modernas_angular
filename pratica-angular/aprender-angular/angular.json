@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "aprender-angular": {
+    "practica-angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -26,7 +26,12 @@
             ],
             "styles": [
               "src/styles.css"
-            ]
+            ],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -56,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "aprender-angular:build:production"
+              "buildTarget": "practica-angular:build:production"
             },
             "development": {
-              "buildTarget": "aprender-angular:build:development"
+              "buildTarget": "practica-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,6 +95,6 @@
     }
   },
   "cli": {
-    "analytics": "3bfd9902-2ca6-458e-90a1-852ee1d24870"
+    "analytics": false
   }
 }
