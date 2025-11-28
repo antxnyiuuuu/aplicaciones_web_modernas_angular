@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-cuenta',
@@ -6,6 +6,14 @@ import { Component } from '@angular/core';
   templateUrl: './cuenta.html',
   styleUrl: './cuenta.css',
 })
-export class Cuenta {
+export class Cuenta implements OnInit, OnDestroy {
+
+  ngOnInit(): void {
+    console.log("Componente Cuenta inicializado");
+  }
+
+  ngOnDestroy(): void {
+    console.log("Componente Cuenta destruido");
+  }
 
 }

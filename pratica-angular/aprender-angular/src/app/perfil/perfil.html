@@ -7,6 +7,12 @@
 <button (click)="cambiarEdad()">Cambiar edad</button>
 <button (click)="cambiarDireccion()">Cambiar dirección</button>
 
-<app-cuenta></app-cuenta>
+<button (click)="mostrarComponenteCuenta()">Mostrar Cuenta</button>
+<button (click)="ocultarComponenteCuenta()">Ocultar Cuenta</button>
+
+@if (mostrarCuenta) {
+    <app-cuenta></app-cuenta>
+}
+
 <app-transacciones></app-transacciones>
 <app-prestamos></app-prestamos>

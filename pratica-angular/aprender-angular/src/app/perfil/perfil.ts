@@ -19,6 +19,7 @@ export class PerfilComponent implements DoCheck {
     public direccion: string = "Av. Amazonas y Río Coca, Quito, Ecuador";
     public telefono: string = "+593 999 999 999";
     public correo: string = "Antony@gmail.com";
+    public mostrarCuenta: boolean = true;
 
     private edadAnterior: number = 30;
     private direccionAnterior: string = "Av. Amazonas y Río Coca, Quito, Ecuador";
@@ -42,6 +43,14 @@ export class PerfilComponent implements DoCheck {
 
     cambiarDireccion(): void {
         this.direccion = "Nueva dirección " + Math.floor(Math.random() * 1000);
+    }
+
+    mostrarComponenteCuenta(): void {
+        this.mostrarCuenta = true;
+    }
+
+    ocultarComponenteCuenta(): void {
+        this.mostrarCuenta = false;
     }
 
 }
