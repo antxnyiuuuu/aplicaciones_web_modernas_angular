@@ -8,12 +8,20 @@
 <button (click)="cambiarRedirigir()">Mostrar Enlace a mi cuenta de GIt</button>
 }
 <ul>
-    @for (prestamo of prestamosList; track prestamo.id) {    
-  <li
-    [class.aprobado]="prestamo.estado == 'Aprobado'"
-    [class.pendiente]="prestamo.estado != 'Aprobado'"
-  >
+    @for (prestamo of prestamosList; track prestamo.id) {
+  <li [class.aprobado]="prestamo.estado == 'Aprobado'" [class.pendiente]="prestamo.estado != 'Aprobado'">
     Monto: ${{ prestamo.monto }} | Estado: {{ prestamo.estado }}
   </li>
     }
 </ul>
+
+@switch (prestamo.tipo) { 
+  @case ("Personal") {
+<li>El Prestamo es de tipo Personal</li>
+} @case ("Hipotecario") {
+<app-transacciones></app-transacciones>
+} @case("Vehicular"){
+<li>El préstamo es para la compra de un vehículo.</li>
+} @default {
+<li>El Prestamo no es reconocido</li>
+} }

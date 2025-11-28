@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Transacciones } from '../transacciones/transacciones';
 
 @Component({
   selector: 'app-prestamos',
-  imports: [],
+  imports: [Transacciones],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
@@ -18,6 +19,8 @@ export class Prestamos {
     {id: 5, monto: 5500, estado: 'Pendiente'},
     {id: 6, monto: 6500, estado: 'Aprobado'},
   ]
+
+  prestamo={id: 1, tipo:"Hipotecario", interes: 5}
 
   cambiarRedirigir() {
     if (this.redirigir == false) {
