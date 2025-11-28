@@ -6,7 +6,7 @@ import { Prestamos } from './prestamos/prestamos';
 
 @Component({
   selector: 'app-root',
-  imports: [ MiPerfil],
+  imports: [MiPerfil],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
