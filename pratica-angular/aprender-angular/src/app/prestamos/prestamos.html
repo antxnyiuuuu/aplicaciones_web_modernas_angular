@@ -7,3 +7,13 @@
 <p>Lo sentimos, este enlace no está disponible.</p>
 <button (click)="cambiarRedirigir()">Mostrar Enlace a mi cuenta de GIt</button>
 }
+<ul>
+    @for (prestamo of prestamosList; track prestamo.id) {    
+  <li
+    [class.aprobado]="prestamo.estado == 'Aprobado'"
+    [class.pendiente]="prestamo.estado != 'Aprobado'"
+  >
+    Monto: ${{ prestamo.monto }} | Estado: {{ prestamo.estado }}
+  </li>
+    }
+</ul>
