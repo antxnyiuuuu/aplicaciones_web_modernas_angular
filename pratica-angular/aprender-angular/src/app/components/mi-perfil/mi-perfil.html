@@ -1,0 +1,14 @@
+<h1>Mi Perfil</h1>
+<em>Mi nombre es {{ nombre }}</em>
+<p>Tengo {{ edad }} años</p>
+<strong>{{ ocupacion }}</strong>
+<p>
+  <cite>Mi dirección es {{ direccion }}</cite>
+</p>
+<br /><br />
+<app-cuenta></app-cuenta>
+
+<br /><br />
+<app-transacciones></app-transacciones>
+<button (click)="cambiarEdad()">Cambiar Edad</button>
+<button (click)="cambiarDireccion()">Cambiar Dirección</button>

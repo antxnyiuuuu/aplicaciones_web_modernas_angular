@@ -1,0 +1,14 @@
+
+      h2 {
+        color: blue;
+      }
+      .resaltar {
+        background-color: yellow;
+        padding: 10px;
+        border: 2px solid red;
+      }
+      .no {
+        background-color: rgb(255, 0, 0);
+        padding: 10px;
+        border: 2px solid gray;
+      }
