@@ -1,17 +1,18 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ProductoComponent } from './producto/producto';
-import { MiPerfil } from './mi-perfil/mi-perfil';
-import { Prestamos } from './prestamos/prestamos';
+import { Component } from '@angular/core';
+import { ProductoComponent } from './components/producto/producto';
+import { config } from './models/config';
+import { Cine } from './components/cine/cine';
+import { Cuenta } from './components/cuenta/cuenta';
+import { Transacciones } from './components/transacciones/transacciones';
 
 @Component({
   selector: 'app-root',
-  imports: [ProductoComponent],
+  standalone: true,
+  imports: [Transacciones, Cuenta],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
-  protected readonly title = signal('Krake Dev - Escuela de Programación');
-  protected readonly subtitle = signal("Bienvenido ,este es mi nuevo proyecto de práctica")
-  protected readonly mesaje = signal("Reto 3")
+  title = config.title;
+  description = config.description;
 }

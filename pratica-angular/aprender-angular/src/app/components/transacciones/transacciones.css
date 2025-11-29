@@ -1,0 +1,12 @@
+.ingreso{
+  background-color: #15ff00;
+  border-radius: 30px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.egreso{
+  background-color: #ff0019;
+  border-radius: 30px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
