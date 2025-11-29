@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { Transaccion } from '../../models/transaccion';
 import { NgClass } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-transacciones',
-  imports: [NgClass],
+  imports: [NgClass, FormsModule],
   templateUrl: './transacciones.html',
   styleUrl: './transacciones.css',
 })
 export class Transacciones {
   public transaccionesList: Array<Transaccion>;
+  public descripcionTransaccion: string = '';
   constructor() {
     this.transaccionesList = [
       new Transaccion(1, new Date('2024-01-15'), 'Pago de servicios', 100, 'egreso'),
@@ -19,5 +21,8 @@ export class Transacciones {
       new Transaccion(5, new Date('2024-03-01'), 'Pago de alquiler', 300, 'egreso'),
       new Transaccion(6, new Date('2024-03-15'), 'Venta de equipo', 400, 'ingreso'),
     ];
+  }
+  mostrarTransaccion() {
+    alert('Mi transaccion es: ' + this.descripcionTransaccion);
   }
 }
