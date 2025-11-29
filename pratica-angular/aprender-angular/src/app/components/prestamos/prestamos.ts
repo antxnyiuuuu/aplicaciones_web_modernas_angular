@@ -3,9 +3,10 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-prestamos',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './prestamos.html',
-  styleUrl: './prestamos.css',
+  styleUrls: ['./prestamos.css'],
 })
 export class Prestamos {
   public prestamosList: Array<any>;

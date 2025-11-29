@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Transaccion } from '../../models/transaccion';
 import { NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-transacciones',
+  standalone: true,
   imports: [NgClass, FormsModule],
   templateUrl: './transacciones.html',
-  styleUrl: './transacciones.css',
+  styleUrls: ['./transacciones.css'],
 })
 export class Transacciones {
   public transaccionesList: Array<Transaccion>;
@@ -22,7 +23,13 @@ export class Transacciones {
       new Transaccion(6, new Date('2024-03-15'), 'Venta de equipo', 400, 'ingreso'),
     ];
   }
+
+  @Output() mensajeEnviado = new EventEmitter();
   mostrarTransaccion() {
     alert('Mi transaccion es: ' + this.descripcionTransaccion);
+  }
+
+  enviarSaludo(){
+    this.mensajeEnviado.emit('Hola desde Transacciones!');
   }
 }

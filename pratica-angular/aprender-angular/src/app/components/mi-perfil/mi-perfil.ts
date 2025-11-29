@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
 import { Cuenta } from '../cuenta/cuenta';
 import { Transacciones } from '../transacciones/transacciones';
 
 @Component({
   selector: 'mi-perfil',
-  imports: [Cuenta, Transacciones, ],
+  standalone: true,
+  imports: [NgIf, Cuenta, Transacciones],
   templateUrl: './mi-perfil.html',
-  styleUrl: './mi-perfil.css',
+  styleUrls: ['./mi-perfil.css'],
 })
 export class MiPerfil {
   public nombre;
@@ -14,6 +16,8 @@ export class MiPerfil {
   public ocupacion;
   public direccion;
   public telefono;
+  public nombreCliente: string = 'Juan Pérez';
+  public mensajeRecibido: string = '';
   constructor() {
     console.log('Se cargó el componente de perfil correctamente.');
     this.nombre = 'Martín Simbaña';
@@ -30,5 +34,9 @@ export class MiPerfil {
   }
   cambiarDireccion() {
     this.direccion = 'Av. Siempre Viva 742, Ciudad, País';
+  }
+
+  recibirMensaje(mensaje: string) {
+    this.mensajeRecibido = mensaje;
   }
 }

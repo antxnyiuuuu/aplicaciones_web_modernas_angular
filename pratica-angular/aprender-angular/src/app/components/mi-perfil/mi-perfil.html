@@ -6,9 +6,10 @@
   <cite>Mi dirección es {{ direccion }}</cite>
 </p>
 <br /><br />
-<app-cuenta></app-cuenta>
+<app-cuenta [nombreCliente]="nombreCliente"></app-cuenta>
 
 <br /><br />
-<app-transacciones></app-transacciones>
+<app-transacciones (mensajeEnviado)="recibirMensaje($event)"></app-transacciones>
+<p *ngIf="mensajeRecibido">Mensaje recibido: {{ mensajeRecibido }}</p>
 <button (click)="cambiarEdad()">Cambiar Edad</button>
 <button (click)="cambiarDireccion()">Cambiar Dirección</button>
