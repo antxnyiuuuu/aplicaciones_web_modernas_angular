@@ -1,0 +1,16 @@
+<p>
+  <input type="text" [(ngModel)]="nuevoPrestamo"/>
+  <button (click)="agregarPrestamo()">Agregar Prestamo</button>
+</p>
+<ul>
+  @for (prestamo of prestamosList; track prestamo.id; let i=$index) {
+  <hr />
+  <br />
+  <li>
+    ID: {{ prestamo.id }} - Monto: ${{ prestamo.monto }} - Estado: {{ prestamo.estado }}
+    <button (click)="eliminarPrestamo(i)">Eliminar</button>
+  </li>
+  <br />
+  <hr />
+  }
+</ul>
