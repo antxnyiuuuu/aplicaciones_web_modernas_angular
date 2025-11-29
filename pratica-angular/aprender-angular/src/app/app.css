@@ -1,0 +1,23 @@
+.activo{
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: greenyellow;
+  padding: 9px;
+  border-radius: 0px 90px 0px 90px;
+  padding: 14px;
+  text-decoration: none;
+  color: black
+}
+.nav {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  background-color: lightgray;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+

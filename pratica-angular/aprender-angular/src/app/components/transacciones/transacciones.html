@@ -1,3 +1,14 @@
+@for (transaccion of transaccionesList; track transaccion.id) {
+<hr />
+<div [ngClass]="transaccion.tipo == 'ingreso' ? 'ingreso' : 'egreso'">
+  <p><strong>ID:</strong> {{ transaccion.id }}</p>
+  <p><strong>Fecha:</strong> {{ transaccion.fecha }}</p>
+  <p><strong>Descripción:</strong> {{ transaccion.descripcion }}</p>
+  <p><strong>Monto:</strong> ${{ transaccion.monto }}</p>
+  <p><strong>Tipo:</strong> {{ transaccion.tipo }}</p>
+</div>
+}
+
 <input type="text" [(ngModel)]="descripcionTransaccion" />
 <button (click)="(mostrarTransaccion())">Mostrar Transaccion</button>
 <p>

@@ -23,7 +23,7 @@ export class MiPerfil {
     this.nombre = 'Antony Chaguamate';
     this.edad = 18;
     this.ocupacion = 'Desarrollador';
-    this.direccion = 'La Planada Colinas del Norte';
+    this.direccion = 'La Planada Colinas del Norte ';
     this.telefono = '0987654321';
   }
   ngDoCheck() {

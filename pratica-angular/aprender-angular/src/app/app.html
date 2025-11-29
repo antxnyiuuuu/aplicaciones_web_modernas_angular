@@ -4,6 +4,17 @@
       <h1>{{ title }}</h1>
       <h2>{{ description }}</h2>
     </div>
- </div>
- <mi-perfil></mi-perfil>
+  </div>
+  <nav class="nav">
+    <a routerLink="/inicio" routerLinkActive="activo">Inicio</a>
+    <br>
+    <a routerLink="/cuenta" routerLinkActive="activo">Cuenta</a>
+    <br>
+    <a routerLink="/transacciones" routerLinkActive="activo">Transacciones</a>
+    <br>
+    <a routerLink="/prestamos" routerLinkActive="activo">Prestamos</a>
+  </nav>
+  <router-outlet>
+
+  </router-outlet>
 </main>

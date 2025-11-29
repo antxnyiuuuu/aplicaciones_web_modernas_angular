@@ -6,11 +6,12 @@ import { Cuenta } from './components/cuenta/cuenta';
 import { Transacciones } from './components/transacciones/transacciones';
 import { Prestamos } from './components/prestamos/prestamos';
 import { MiPerfil } from './components/mi-perfil/mi-perfil';
+import { RouterLink, RouterLinkActive, RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MiPerfil],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
