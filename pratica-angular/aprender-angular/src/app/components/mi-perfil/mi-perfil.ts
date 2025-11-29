@@ -20,10 +20,10 @@ export class MiPerfil {
   public mensajeRecibido: string = '';
   constructor() {
     console.log('Se cargó el componente de perfil correctamente.');
-    this.nombre = 'Martín Simbaña';
+    this.nombre = 'Antony Chaguamate';
     this.edad = 18;
     this.ocupacion = 'Desarrollador';
-    this.direccion = 'Calle Falsa 123, Ciudad, País';
+    this.direccion = 'La Planada Colinas del Norte';
     this.telefono = '0987654321';
   }
   ngDoCheck() {
